@@ -33,6 +33,16 @@ function startGame() {
     countTime(countTimer);
 }
 
+function stopGame() {
+    // ボタンの無効化
+    document.gameForm.start.disabled = true;
+    document.gameForm.ranking.disabled = true;
+    
+    // タップカウンターリセット
+    this.countTimer = 0;
+}
+
+
 // 【mBaaS】データの保存
 function saveScore (name, score) {
     // **********【問題１】名前とスコアを保存しよう！**********
@@ -102,6 +112,7 @@ function imputName(count){
 // タップ数カウント
 function tapCount() {
     if (tapFlag) {
-      this.countTimer = 0;
+      this.counter += 1;
+      $("#list-page strong").html(String(this.counter));
     }
 }
