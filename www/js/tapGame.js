@@ -42,6 +42,14 @@ function stopGame() {
     this.countTimer = 0;
 }
 
+function resetGame() {
+    // ボタンの無効化
+    document.gameForm.start.disabled = true;
+    document.gameForm.ranking.disabled = true;
+    
+    // タップカウンターリセット
+    this.countTimer = 13;
+}
 
 // 【mBaaS】データの保存
 function saveScore (name, score) {
