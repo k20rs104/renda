@@ -102,7 +102,6 @@ function imputName(count){
 // タップ数カウント
 function tapCount() {
     if (tapFlag) {
-        this.counter += 1;
-        $("#list-page strong").html(String(this.counter));
+      this.countTimer = 0;
     }
 }
